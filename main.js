@@ -150,7 +150,7 @@ function init() {
 
   let loader = new GLTFLoader();
 loader.load(
-  './models/scene.gltf',
+  './public/models/scene.gltf',
   function (gltf) {
     unicorn = gltf.scene;
 
