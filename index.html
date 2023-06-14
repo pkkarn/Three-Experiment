@@ -6,15 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
       body {
         font-family: sans-serif;
         margin: 0;
         padding: 0;
       }
+      /* Add animation keyframe glitch */
+      @keyframes glitch {
+        0% {
+          transform: translate(0);
+        }
+        25% {
+          transform: translate(-5px, 5px);
+        }
+        50% {
+          transform: translate(-5px, -5px);
+        }
+        75% {
+          transform: translate(5px, 5px);
+        }
+        100% {
+          transform: translate(5px, -5px);
+        }
+      }
+      #heading {
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+        font-family: "Bungee Spice";
+/* positiona absolute and in top mid */
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        /* make 3d effect with dim white shadow */
+        
+        /* 3d effect on font */
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        animation: glitch 1s linear infinite;
+      }
     </style>
   </head>
   <body>
-    <!-- <div id="app"></div> -->
+    <div id="heading">
+      <h3>
+        You're Limited By Your Imagination <br>
+        Not By Your Tools
+      </h3>
+    </div>
     <!-- Add fullscreen button -->
     <script type="module" src="/main.js"></script>
   </body>
